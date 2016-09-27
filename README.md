@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/lonelyplanet/op_error.svg?branch=master)](https://travis-ci.org/lonelyplanet/op_error)
+
 # OpError
 
 A simple error formatter for the JSON API spec that puts the control of
