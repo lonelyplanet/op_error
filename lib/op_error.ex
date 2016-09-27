@@ -1,0 +1,2 @@
+defmodule OpError do
+end
