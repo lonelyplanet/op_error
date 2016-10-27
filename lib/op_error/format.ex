@@ -7,6 +7,7 @@ defmodule OpError.Format do
   """
 
   @default_404_errors [
+    Ecto.Query.CastError,
     Ecto.CastError,
     Ecto.NoResultsError,
     Phoenix.Router.NoRouteError

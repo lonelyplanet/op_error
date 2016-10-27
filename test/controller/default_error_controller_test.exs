@@ -10,6 +10,15 @@ defmodule DefaultErrorControllerTest do
     assert error["detail"] == ""
   end
 
+  test "GET /default/cast_error" do
+    conn = get build_conn, "/default/cast_error"
+    %{"errors" => [error]} = json_response(conn, 404)
+
+    assert error["title"] == "Resource Not Found"
+    assert error["status"] == "404"
+    assert error["detail"] == ""
+  end
+
   test "get /default/500" do
     conn = get build_conn, "/default/500"
     %{"errors" => [error]} = json_response(conn, 500)

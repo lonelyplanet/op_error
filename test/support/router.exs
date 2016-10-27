@@ -13,6 +13,7 @@ defmodule Test.Router do
 
     get "/default/404", Test.DefaultErrorController, :four_oh_four
     get "/default/500", Test.DefaultErrorController, :five_oh_oh
+    get "/default/cast_error", Test.DefaultErrorController, :cast_error
 
     get "/custom/nope", Test.CustomErrorController, :private_access
     get "/custom/boom", Test.CustomErrorController, :problematic_call
