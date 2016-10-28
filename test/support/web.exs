@@ -9,7 +9,7 @@ defmodule Test.Web do
   def controller_custom do
     quote do
       use Phoenix.Controller, namespace: Test
-      use OpError.Plug, format: Test.CustomFormat
+      use OpError.Plug, format: Test.CustomFormat, request_id: "some-special-id"
     end
   end
 
