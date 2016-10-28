@@ -10,9 +10,10 @@ defmodule OpError.View do
     %{ errors: [ format(error) ] }
   end
 
-  defp format(%{status: status}=error) do
+  defp format(%{status: status, error_id: id}=error) do
     error
     |> Map.take([:status, :title, :detail])
     |> Map.put(:status, "#{status}")
+    |> Map.put(:id, id)
   end
 end
